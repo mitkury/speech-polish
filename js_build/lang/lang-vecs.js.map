@@ -1,0 +1,1 @@
+{"version":3,"file":"lang-vecs.js","sourceRoot":"","sources":["../../temp_node_source/lang/lang-vecs.ts"],"names":[],"mappings":"AAAA,OAAO,EAAqB,cAAc,EAAE,MAAM,2BAA2B,CAAC;AAE9E,MAAM,OAAO,QAAQ;IACnB,MAAM,CAAC,MAAM,CAAC,OAA0B;QACtC,OAAO,IAAI,cAAc,CAAC,OAAO,CAAC,CAAC;IACrC,CAAC;CACF"}
