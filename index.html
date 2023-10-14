@@ -122,10 +122,8 @@
       });
 
       const result = await lang.askForObject({
-        title: 'Edit provided text',
-        instructions: ["You're a professional copywriter and you've been asked to edit the provided text. The text is probably raw and written by a non-native speaker and it's not very compelling.",
-          "First, carefully read the text and reason about the meaning and what can be improved.",
-          "Edit the text to make it more compelling and engaging based on the reasoning. If needed - re-structure the text, remove all of the unnecessary parts or repetitions"],
+        title: 'Edit the provided text',
+        instructions: ["As a pro copywriter, your task is to polish the given text. First, read it carefully and identify areas for improvement. Make it compelling yet simple. Cut the fluff and restructure as needed."],
         context: text,
         content: {
           "original text": text,
