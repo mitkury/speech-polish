@@ -3,7 +3,61 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech Polish</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #stage-1,
+    #stage-2,
+    #stage-3 {
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    audio {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -12,9 +66,9 @@
     recordings, creating polished speeches ready for any audience.</p>
 
   OpenAI API Key:
-  <input type="text" id="openai" value="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" />
+  <input type="text" id="openai" value="" />
   ElevenLab API Key:
-  <input type="text" id="elevenlab" value="0d71db3fbf266eae196af118d8bd6dd8" />
+  <input type="text" id="elevenlab" value="" />
   Audio File:
   <input type="file" id="file-input" />
   <button id="start-button">Start</button>
@@ -164,5 +218,4 @@
 
   </script>
 </body>
-
 </html>
