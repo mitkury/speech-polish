@@ -13,8 +13,8 @@ export class OpenAILang extends LanguageModel {
         };
     }
     async ask(prompt, onResult) {
-        const tokensInSystemPrompt = this.tokenizer.encode(this._config.systemPrompt).length;
-        const tokensInPrompt = this.tokenizer.encode(prompt).length;
+        const tokensInSystemPrompt = 0; //this.tokenizer.encode(this._config.systemPrompt).length;
+        const tokensInPrompt = 0; //this.tokenizer.encode(prompt).length;
         const result = new LangResultWithString(prompt, tokensInSystemPrompt + tokensInPrompt);
         const onData = (data) => {
             if (data.finished) {
@@ -28,9 +28,9 @@ export class OpenAILang extends LanguageModel {
                     : "";
                 result.answer += deltaContent;
                 result.totalTokens = tokensInSystemPrompt + tokensInPrompt +
-                    this.tokenizer.encode(result.answer).length;
+                    /*this.tokenizer.encode(result.answer).length;*/ 0;
                 // We do it from the config because users may want to set their own price calculation function.
-                result.totalCost = this._config.calcCost(tokensInSystemPrompt + tokensInPrompt, this.tokenizer.encode(result.answer).length);
+                result.totalCost = this._config.calcCost(tokensInSystemPrompt + tokensInPrompt, /*this.tokenizer.encode(result.answer).length*/ 0);
                 onResult === null || onResult === void 0 ? void 0 : onResult(result);
             }
         };

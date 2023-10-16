@@ -191,6 +191,27 @@
     const fileInput = document.getElementById('file-input');
     const buttonEl = document.getElementById("start-button");
 
+    // Try to load keys on page load
+    const openaiKey = document.cookie.replace(/(?:(?:^|.*;\s*)openai_key\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    const elevenlabKey = document.cookie.replace(/(?:(?:^|.*;\s*)elevenlab_key\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+
+    if (openaiKey) {
+      document.getElementById("openai").value = openaiKey;
+    }
+    if (elevenlabKey) {
+      document.getElementById("elevenlab").value = elevenlabKey;
+    }
+
+    document.getElementById("openai").addEventListener("change", (e) => {
+      document.cookie = `openai_key=${e.target.value}`;
+    })
+
+    document.getElementById("elevenlab").addEventListener("change", (e) => {
+      document.cookie = `elevenlab_key=${e.target.value}`;
+    })
+
+
+
     buttonEl.addEventListener("click", async () => {
       const openAIToken = document.getElementById("openai").value;
       const elevenlabApiToken = document.getElementById("elevenlab").value;
